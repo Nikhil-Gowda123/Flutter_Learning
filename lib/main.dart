@@ -1,6 +1,6 @@
+import 'package:first_app/profile_Screen/profil_screen_page.dart';
 import 'package:flutter/material.dart';
-import 'container_widget.dart';
-import 'row_widget.dart';
+
 void main(){
 runApp(MyApp());
 }
@@ -9,14 +9,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.lightBlue,
-        body:Center(
-          child:MyRowWidget()
-        )
-    ),);
+    return profileScreen();
   }
 }
 
