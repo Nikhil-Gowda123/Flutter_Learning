@@ -4,7 +4,7 @@ class stack2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
         body: Center(
           child: Stack(clipBehavior: Clip.none,
@@ -17,6 +17,34 @@ class stack2 extends StatelessWidget {
                     borderRadius: BorderRadius.circular(12.0),
                     color: Colors.brown,
                   ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      children: [SizedBox(height: 50,),
+                        Row(
+                          children: [
+                            Text("Free delivery today!",
+                            style: TextStyle(
+                              color: Colors.white,
+
+                            ),),
+
+                          ],
+                        ),
+                        Row(
+                          children: [
+                            Text("On orders above rupees 499",
+                              style: TextStyle(
+                                color: Colors.grey,
+
+                              ),),
+
+                          ],
+                        )
+
+                      ],
+                    ),
+                  ),
                 ),
               ),
               Positioned(
@@ -24,15 +52,29 @@ class stack2 extends StatelessWidget {
                 left: 20,
                 child: Container(
                   height: 40,
-                  width: 50,
+                  width: 100,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(8.0),
                     color: Colors.yellow,
                   ),
+
                 ),
               ),
+              Positioned(
+                left: 40,
+                child: Text(
+                  "LIMITED",
+                  style: TextStyle(
+                    color: Colors.black,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+
             ],
+
           ),
+
         ),
       ),
     );
